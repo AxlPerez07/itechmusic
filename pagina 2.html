@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>iTech & Music | Electrónica y Música en Magallanes</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://unpkg.com/bulma@1.0.2/css/bulma.min.css" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+  <style>
+    .navbar.is-dark {
+      background-color: white !important;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .navbar.is-dark .navbar-item,
+    .navbar.is-dark .navbar-link,
+    .navbar.is-dark .navbar-burger span {
+      color: #3273dc;
+    }
+    .navbar.is-dark .navbar-item:hover,
+    .navbar.is-dark .navbar-link:hover {
+      background-color: #3273dc;
+      color: white !important;
+    }
+    .is-primary {
+      background-color: #3273dc !important;
+      color: white !important;
+    }
+    .is-primary:hover {
+      background-color: #3273dc !important;
+      color: white !important;
+    }
+    .is-primary a,
+    .is-primary .title,
+    .is-primary .subtitle {
+      color: white !important;
+    }
+    .navbar.is-dark .navbar-burger.is-active span {
+      background-color: #3273dc !important;
+    }
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+    .carousel-item {
+      min-width: 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+    .image img {
+      object-fit: contain;
+      width: 100%;
+      height: 200px;
+      border-radius: 6px;
+      display: block;
+      margin: 0 auto;
+    }
+    .tabs a {
+      font-weight: 600;
+      color: #3273dc;
+    }
+    .tabs a:hover {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar is-white" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand is-flex is-justify-content-space-between is-align-items-center" style="flex-grow: 1; width: 100%;">
+        <div class="navbar-item">
+          <button class="button is-link is-light is-small" id="openModal">Registrarse</button>
+        </div>
+        <div class="navbar-item is-flex-grow-1 is-justify-content-center is-flex">
+          <a href="itechmusic trabajo programacion.html">
+            <img src="logo.png" alt="iTech & Music" style="height: 60px;" />
+          </a>
+        </div>
+        <div class="navbar-item is-flex is-align-items-center">
+          <a class="icon mr-3" href="#">
+            <i class="fas fa-shopping-cart fa-lg"></i>
+          </a>
+          <div class="control">
+            <input class="input is-rounded" type="text" placeholder="Buscar productos..." />
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal" id="registroModal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Registro de Usuario</p>
+        <button class="delete" aria-label="close" id="closeModal"></button>
+      </header>
+      <section class="modal-card-body">
+        <div class="field">
+          <label class="label">Nombre</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Tu nombre completo" />
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Correo electrónico</label>
+          <div class="control">
+            <input class="input" type="email" placeholder="ejemplo@correo.com" />
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Contraseña</label>
+          <div class="control">
+            <input class="input" type="password" placeholder="********" />
+          </div>
+        </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-link">Registrarse</button>
+        <button class="button" id="cancelModal">Cancelar</button>
+      </footer>
+    </div>
+  </div>
+
+  <div class="has-background-light py-2">
+    <div class="container">
+      <div class="tabs is-centered is-toggle is-fullwidth">
+        <ul>
+          <li><a href="#audio">Audio</a></li>
+          <li><a href="#celular">Celular</a></li>
+          <li><a href="#telefonia">Telefonía</a></li>
+          <li><a href="#tablet">Tablet</a></li>
+          <li><a href="#relojes">Relojes</a></li>
+          <li><a href="#consola">Consola</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<section class="hero is-link">
+  <div class="hero-body has-text-centered">
+    <p class="title has-text-white">Novedades</p>
+    <p class="subtitle has-text-white">Explora lo más reciente en tecnología y música</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3" style="overflow: hidden;">
+              <img src="audiJBL.jpg" alt="Auriculares JBL Tune 500" style="width: 100%; height: 100%; object-fit: contain;" />
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p class="title is-6 has-text-primary">Auriculares JBL Tune 500</p>
+            <p><del>$29.990</del> <strong>$24.990</strong></p>
+            <button class="button is-dark is-small"><i class="fas fa-shopping-cart"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3" style="overflow: hidden;">
+              <img src="smartwatch.webp" alt="Smartwatch Xiaomi Mi Band 7" style="width: 100%; height: 100%; object-fit: contain;" />
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p class="title is-6 has-text-primary">Smartwatch Xiaomi Mi Band 7</p>
+            <p><strong>$39.990</strong></p>
+            <button class="button is-dark is-small"><i class="fas fa-shopping-cart"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3" style="overflow: hidden;">
+              <img src="ps5.jpg" alt="Control PS5 DualSense" style="width: 100%; height: 100%; object-fit: contain;" />
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p class="title is-6 has-text-primary">Control PS5 DualSense</p>
+            <p><strong>$54.990</strong></p>
+            <button class="button is-dark is-small"><i class="fas fa-shopping-cart"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3" style="overflow: hidden;">
+              <img src="bose.webp" alt="Bose SoundLink Micro" style="width: 100%; height: 100%; object-fit: contain;" />
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p class="title is-6 has-text-primary">Bose SoundLink Micro</p>
+            <p><strong>$59.990</strong></p>
+            <button class="button is-dark is-small"><i class="fas fa-shopping-cart"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3" style="overflow: hidden;">
+              <img src="ukelele.jpg" alt="Ukelele Soprano Mahalo" style="width: 100%; height: 100%; object-fit: contain;" />
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p class="title is-6 has-text-primary">Ukelele Soprano Mahalo</p>
+            <p><del>$34.990</del> <strong>$29.990</strong></p>
+            <button class="button is-dark is-small"><i class="fas fa-shopping-cart"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3" style="overflow: hidden;">
+              <img src="teclado.webp" alt="Teclado Mecánico Redragon" style="width: 100%; height: 100%; object-fit: contain;" />
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p class="title is-6 has-text-primary">Teclado Mecánico Redragon</p>
+            <p><strong>$42.500</strong></p>
+            <button class="button is-dark is-small"><i class="fas fa-shopping-cart"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3" style="overflow: hidden;">
+              <img src="micro.webp" alt="Micrófono Condensador BM-800" style="width: 100%; height: 100%; object-fit: contain;" />
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p class="title is-6 has-text-primary">Micrófono Condensador BM-800</p>
+            <p><strong>$24.900</strong></p>
+            <button class="button is-dark is-small"><i class="fas fa-shopping-cart"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3" style="overflow: hidden;">
+              <img src="tablet.webp" alt="Tablet Lenovo M10 HD" style="width: 100%; height: 100%; object-fit: contain;" />
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p class="title is-6 has-text-primary">Tablet Lenovo M10 HD</p>
+            <p><strong>$119.990</strong></p>
+            <button class="button is-dark is-small"><i class="fas fa-shopping-cart"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3" style="overflow: hidden;">
+              <img src="NS2.webp" alt="Nintendo Switch 2" style="width: 100%; height: 100%; object-fit: contain;" />
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p class="title is-6 has-text-primary">Nintendo Switch 2</p>
+            <p class="has-text-weight-bold">$619.990</p>
+            <button class="button is-dark is-small"><i class="fas fa-shopping-cart"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3" style="overflow: hidden;">
+              <img src="NS2B.webp" alt="Nintendo Switch 2 Bundle" style="width: 100%; height: 100%; object-fit: contain;" />
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p class="title is-6 has-text-primary">Nintendo Switch 2 Bundle</p>
+            <p class="has-text-weight-bold">$649.900</p>
+            <button class="button is-dark is-small"><i class="fas fa-shopping-cart"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3" style="overflow: hidden;">
+              <img src="DJI.jpg" alt="DJI RS4 PRO" style="width: 100%; height: 100%; object-fit: contain;" />
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p class="title is-6 has-text-primary">DJI RS4 PRO</p>
+            <p class="has-text-weight-bold">$809.900</p>
+            <button class="button is-dark is-small"><i class="fas fa-shopping-cart"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3" style="overflow: hidden;">
+              <img src="DJIC.jpg" alt="DJI RS4 PRO COMBO" style="width: 100%; height: 100%; object-fit: contain;" />
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p class="title is-6 has-text-primary">DJI RS4 PRO COMBO</p>
+            <p class="has-text-weight-bold">$869.900</p>
+            <button class="button is-dark is-small"><i class="fas fa-shopping-cart"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title has-text-centered">Preguntas Frecuentes</h2>
+    <div class="box">
+      <details open>
+        <summary class="has-text-weight-semibold">¿Se puede retirar en tienda?</summary>
+        <p>Sí, puedes retirar tus compras directamente en nuestra tienda física en Punta Arenas.</p>
+      </details>
+      <details>
+        <summary class="has-text-weight-semibold">¿Cuánto tarda el envío?</summary>
+        <p>Los envíos demoran entre 2 a 5 días hábiles, dependiendo de tu ubicación.</p>
+      </details>
+      <details>
+        <summary class="has-text-weight-semibold">¿Qué métodos de pago aceptan?</summary>
+        <p>Aceptamos tarjetas de crédito, débito, transferencia bancaria y PayPal.</p>
+      </details>
+      <details>
+        <summary class="has-text-weight-semibold">¿Puedo cambiar o devolver un producto?</summary>
+        <p>Sí, tienes hasta 10 días para cambiar o devolver tu producto presentando tu boleta.</p>
+      </details>
+      <details>
+        <summary class="has-text-weight-semibold">¿Es segura mi información?</summary>
+        <p>Sí, usamos protocolos de seguridad y tus datos están protegidos mediante cifrado.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p><strong>iTech & Music</strong> | Zona Austral, Punta Arenas, Chile<br /></p>
+    <p>
+      <a href="https://www.facebook.com/people/ITech-Music/100088855235720/"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="https://www.instagram.com/itechandmusic/"><i class="fab fa-instagram fa-2x"></i></a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const burgers = Array.from(document.querySelectorAll('.navbar-burger'));
+    burgers.forEach(el => {
+      el.addEventListener('click', () => {
+        const target = document.getElementById(el.dataset.target);
+        el.classList.toggle('is-active');
+        target.classList.toggle('is-active');
+      });
+    });
+  });
+</script>
+ <script>
+    let currentSlide = 0;
+    const items = document.querySelectorAll(".carousel-item");
+    const totalSlides = items.length;
+
+    function updateCarousel() {
+      items.forEach((item, index) => {
+        item.style.transform = `translateX(-${currentSlide * 100}%)`;
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateCarousel();
+    }
+
+    setInterval(() => {
+      nextSlide();
+    }, 4000);
+
+    window.addEventListener("load", updateCarousel);
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const burgers = Array.from(document.querySelectorAll('.navbar-burger'));
+      burgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = document.getElementById(el.dataset.target);
+          el.classList.toggle('is-active');
+          target.classList.toggle('is-active');
+        });
+      });
+    });
+
+    document.getElementById('openModal').addEventListener('click', () => {
+      document.getElementById('registroModal').classList.add('is-active');
+    });
+    document.getElementById('closeModal').addEventListener('click', () => {
+      document.getElementById('registroModal').classList.remove('is-active');
+    });
+    document.getElementById('cancelModal').addEventListener('click', () => {
+      document.getElementById('registroModal').classList.remove('is-active');
+    });
+  </script>
+</body>
+</html>

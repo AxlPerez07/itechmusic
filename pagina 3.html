@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>iTech & Music | Electrónica y Música en Magallanes</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://unpkg.com/bulma@1.0.2/css/bulma.min.css" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+  <style>
+    .navbar.is-dark {
+      background-color: white !important;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .navbar.is-dark .navbar-item,
+    .navbar.is-dark .navbar-link,
+    .navbar.is-dark .navbar-burger span {
+      color: #3273dc;
+    }
+    .navbar.is-dark .navbar-item:hover,
+    .navbar.is-dark .navbar-link:hover {
+      background-color: #3273dc;
+      color: white !important;
+    }
+    .is-primary {
+      background-color: #3273dc !important;
+      color: white !important;
+    }
+    .is-primary:hover {
+      background-color: #3273dc !important;
+      color: white !important;
+    }
+    .is-primary a,
+    .is-primary .title,
+    .is-primary .subtitle {
+      color: white !important;
+    }
+    .navbar.is-dark .navbar-burger.is-active span {
+      background-color: #3273dc !important;
+    }
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+    .carousel-item {
+      min-width: 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+    .image img {
+      object-fit: contain;
+      width: 100%;
+      height: 200px;
+      border-radius: 6px;
+      display: block;
+      margin: 0 auto;
+    }
+    .tabs a {
+      font-weight: 600;
+      color: #3273dc;
+    }
+    .tabs a:hover {
+      background-color: #f5f5f5;
+    }
+
+    .contact-section {
+      margin: 3rem 0;
+    }
+    .contact-info ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .contact-info li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #3273dc;
+    }
+    .contact-info svg {
+      margin-right: 0.5rem;
+      fill: #3273dc;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+    .contact-logo {
+      max-width: 220px;
+      margin-bottom: 1rem;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar is-white" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand is-flex is-justify-content-space-between is-align-items-center" style="flex-grow: 1; width: 100%;">
+        <div class="navbar-item">
+          <button class="button is-link is-light is-small" id="openModal">Registrarse</button>
+        </div>
+        <div class="navbar-item is-flex-grow-1 is-justify-content-center is-flex">
+          <a href="itechmusic trabajo programacion.html">
+            <img src="logo.png" alt="iTech & Music" style="height: 60px;" />
+          </a>
+        </div>
+        <div class="navbar-item is-flex is-align-items-center">
+          <a class="icon mr-3" href="#">
+            <i class="fas fa-shopping-cart fa-lg"></i>
+          </a>
+          <div class="control">
+            <input class="input is-rounded" type="text" placeholder="Buscar productos..." />
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal" id="registroModal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Registro de Usuario</p>
+        <button class="delete" aria-label="close" id="closeModal"></button>
+      </header>
+      <section class="modal-card-body">
+        <div class="field">
+          <label class="label">Nombre</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Tu nombre completo" />
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Correo electrónico</label>
+          <div class="control">
+            <input class="input" type="email" placeholder="ejemplo@correo.com" />
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Contraseña</label>
+          <div class="control">
+            <input class="input" type="password" placeholder="********" />
+          </div>
+        </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-link">Registrarse</button>
+        <button class="button" id="cancelModal">Cancelar</button>
+      </footer>
+    </div>
+  </div>
+
+  <div class="has-background-light py-2">
+    <div class="container">
+      <div class="tabs is-centered is-toggle is-fullwidth">
+        <ul>
+          <li><a href="#audio">Audio</a></li>
+          <li><a href="#celular">Celular</a></li>
+          <li><a href="#telefonia">Telefonía</a></li>
+          <li><a href="#tablet">Tablet</a></li>
+          <li><a href="#relojes">Relojes</a></li>
+          <li><a href="#consola">Consola</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero is-primary">
+    <div class="hero-body has-text-centered">
+      <p class="title">Sobre Nosotros</p>
+      <p class="subtitle">Conoce más sobre iTech & Music</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="content has-text-centered">
+        <h2 class="title is-4">¿Qué es iTech & Music?</h2>
+        <p>
+          <strong>iTech & Music</strong> es una tienda especializada en productos de electrónica y música, con un enfoque en tecnología de alta calidad y audio profesional. Ofrecemos una amplia gama de artículos como celulares, tablets, relojes inteligentes, consolas de videojuegos, instrumentos musicales y equipos de sonido de marcas reconocidas como JBL, Bose y Xiaomi.
+        </p>
+        <p>
+          Nuestro objetivo es entregar soluciones tecnológicas accesibles a todos los habitantes de la región austral, combinando la innovación digital con la pasión por la música.
+        </p>
+        <p>
+          Estamos ubicados en <strong>Punta Arenas, Región de Magallanes y la Antártica Chilena, Chile</strong>, y atendemos tanto en nuestra tienda física como en línea para todo el sur del país.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-section">
+    <div class="container">
+      <div class="columns is-vcentered is-variable is-8">
+        <div class="column is-half">
+          <iframe loading="lazy" src="https://maps.google.com/maps?q=I%20tech%20music&t=m&z=15&output=embed&iwloc=near" title="I tech music" aria-label="I tech music"></iframe>
+        </div>
+        <div class="column is-half has-text-centered">
+          <img class="contact-logo" src="https://itechmusic.com/wp-content/uploads/2025/05/Logo-negro-220x30-1.png" alt="iTech & Music Logo" />
+          <h6 class="title is-6">La tienda de tecnología y música más grande de la Patagonia.</h6>
+          <div class="contact-info">
+            <ul>
+              <li>
+                <svg aria-hidden="true" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg>
+                Manzana 3B, Lote A, Zona Austral de Punta Arenas
+              </li>
+              <li>
+                <svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/></svg>
+                (+56) 9 47459509
+              </li>
+              <li>
+                <svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"/></svg>
+                itechymusic@gmail.com
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top:1rem;">
+            <a href="https://itechmusic.com/?page_id=1121" class="button is-link is-light is-small" target="_blank" rel="noopener">Política de Privacidad y Despacho</a>
+            <a href="https://itechmusic.com/?page_id=1111" class="button is-link is-light is-small" target="_blank" rel="noopener">Términos y Condiciones</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p><strong>iTech & Music</strong> | Zona Austral, Punta Arenas, Chile<br />
+      <p>
+        <a href="https://www.facebook.com/people/ITech-Music/100088855235720/"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="https://www.instagram.com/itechandmusic/"><i class="fab fa-instagram fa-2x"></i></a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burgers = Array.from(document.querySelectorAll('.navbar-burger'));
+      burgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = document.getElementById(el.dataset.target);
+          el.classList.toggle('is-active');
+          target.classList.toggle('is-active');
+        });
+      });
+
+      const openModal = document.getElementById('openModal');
+      const closeModal = document.getElementById('closeModal');
+      const cancelModal = document.getElementById('cancelModal');
+      const modal = document.getElementById('registroModal');
+
+      openModal.addEventListener('click', () => modal.classList.add('is-active'));
+      closeModal.addEventListener('click', () => modal.classList.remove('is-active'));
+      cancelModal.addEventListener('click', () => modal.classList.remove('is-active'));
+    });
+  </script>
+</body>
+</html>
